@@ -1,0 +1,174 @@
+/* Tema personalizado: identidad oscura con degradados verdes (igual que el login). */
+
+body {
+  font-family: 'Manrope', 'Segoe UI', system-ui, sans-serif;
+  background:
+    radial-gradient(circle at 78% 8%, rgba(34, 197, 94, 0.18), transparent 30%),
+    linear-gradient(135deg, #020617 0%, #052e16 55%, #020617 100%);
+  background-attachment: fixed;
+  color: #f8fafc;
+}
+
+/* Topbar con degradado verde oscuro */
+.layout-topbar {
+  background: linear-gradient(90deg, #020617 0%, #052e16 60%, #14532d 100%) !important;
+  border-bottom: 1px solid rgba(134, 239, 172, 0.35) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+}
+
+.layout-topbar .layout-topbar-logo span:last-child {
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: #ecfdf5;
+}
+
+.layout-topbar .layout-topbar-logo .bg-primary {
+  background: linear-gradient(135deg, #22c55e, #15803d) !important;
+  color: #022c22 !important;
+}
+
+.layout-topbar-action {
+  color: #bbf7d0 !important;
+
+  &:hover {
+    background: rgba(134, 239, 172, 0.15) !important;
+  }
+}
+
+/* Sidebar oscuro con acentos verdes */
+.layout-sidebar {
+  background: rgba(2, 6, 23, 0.92) !important;
+  border-right: 1px solid rgba(134, 239, 172, 0.25) !important;
+  backdrop-filter: blur(12px);
+}
+
+.layout-menu .layout-root-menuitem > .layout-menuitem-root-text {
+  color: #86efac !important;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+}
+
+.layout-menu a.layout-menuitem-link {
+  color: #d1fae5 !important;
+  border-radius: 14px !important;
+  border-left: 3px solid transparent;
+
+  &:hover {
+    background: linear-gradient(90deg, rgba(34, 197, 94, 0.25), transparent) !important;
+    border-left-color: #22c55e;
+  }
+
+  &.active-route,
+  &[aria-expanded='true'] {
+    background: linear-gradient(90deg, rgba(34, 197, 94, 0.35), transparent) !important;
+    border-left-color: #4ade80;
+    color: #f0fdf4 !important;
+  }
+}
+
+/* Password (p-password) con el mismo estilo de los inputs */
+.p-password {
+  width: 100%;
+  display: block;
+}
+
+.p-password .p-password-input,
+.p-password input {
+  width: 100%;
+  min-height: 3rem;
+  border: 1px solid rgba(148, 163, 184, 0.26) !important;
+  border-left: 4px solid #86efac !important;
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.85), rgba(2, 6, 23, 0.85)) !important;
+  color: #f8fafc !important;
+  border-radius: 12px !important;
+  padding: 0 1rem !important;
+  outline: 0;
+}
+
+.p-password .p-password-input:focus,
+.p-password input:focus {
+  border-color: rgba(134, 239, 172, 0.9) !important;
+  box-shadow: 0 0 0 3px rgba(134, 239, 172, 0.12) !important;
+}
+
+.p-password .p-password-toggle-mask-icon {
+  color: #86efac !important;
+}
+
+/* Selects (p-select) con estilo propio y panel desplegable oscuro */
+.p-select {
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.85), rgba(2, 6, 23, 0.85)) !important;
+  color: #f8fafc !important;
+  border: 1px solid rgba(148, 163, 184, 0.26) !important;
+  border-left: 4px solid #86efac !important;
+  border-radius: 12px !important;
+  min-height: 3rem;
+}
+
+.p-select .p-select-label {
+  color: #f8fafc !important;
+  padding: 0.7rem 1rem !important;
+}
+
+.p-select-overlay {
+  background: #0f172a !important;
+  color: #f8fafc !important;
+  border: 1px solid rgba(134, 239, 172, 0.3) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.5) !important;
+  max-height: 16rem !important;
+  overflow-y: auto !important;
+}
+
+.p-select-overlay .p-select-option {
+  color: #e2e8f0 !important;
+  padding: 0.6rem 1rem !important;
+}
+
+.p-select-overlay .p-select-option:hover,
+.p-select-overlay .p-select-option.p-focus {
+  background: rgba(34, 197, 94, 0.22) !important;
+  color: #f0fdf4 !important;
+}
+
+/* Footer */
+.layout-footer {
+  background: transparent !important;
+  color: #86efac !important;
+  border-top: 1px solid rgba(134, 239, 172, 0.2);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+}
+
+/* Tarjetas genéricas del template */
+.card {
+  background: rgba(2, 6, 23, 0.55) !important;
+  border: 1px solid rgba(226, 232, 240, 0.14) !important;
+  border-radius: 14px !important;
+  color: #f8fafc;
+  backdrop-filter: blur(10px);
+}
+
+/* Botones primarios verdes */
+.p-button:not(.p-button-secondary):not(.p-button-danger):not(.p-button-text):not(.p-button-rounded) {
+  background: linear-gradient(135deg, #22c55e, #15803d) !important;
+  border: none !important;
+  border-radius: 14px !important;
+  color: #022c22 !important;
+  font-weight: 700;
+}
+
+/* Dashboard */
+.tool-dashboard .dashboard-hero,
+.tool-dashboard .metric-tile,
+.tool-dashboard .work-panel {
+  background: rgba(2, 6, 23, 0.55) !important;
+  border: 1px solid rgba(134, 239, 172, 0.25) !important;
+  color: #f8fafc;
+}
+
+.tool-dashboard .eyebrow {
+  color: #86efac !important;
+}

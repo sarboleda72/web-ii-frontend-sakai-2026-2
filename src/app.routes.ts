@@ -4,7 +4,7 @@ import { Dashboard } from './app/pages/dashboard/dashboard';
 import { Documentation } from './app/pages/documentation/documentation';
 import { Landing } from './app/pages/landing/landing';
 import { Notfound } from './app/pages/notfound/notfound';
-import { authGuard } from './app/core/guards/auth.guard';
+import { authGuard, roleGuard } from './app/core/guards/auth.guard';
 
 export const appRoutes: Routes = [
   {
@@ -20,10 +20,25 @@ export const appRoutes: Routes = [
         component: Dashboard,
       },
 
-      // Nueva pantalla conectada a NestJS.
+      // Nueva pantalla conectada a NestJS. Solo administradores.
       {
         path: 'users',
         loadComponent: () => import('./app/pages/users/users').then((m) => m.UsersPage),
+        canActivate: [roleGuard(['ADMIN'])],
+      },
+
+      // CRUD de herramientas (módulo 2).
+      {
+        path: 'herramientas',
+        loadComponent: () => import('./app/pages/herramientas/herramientas').then((m) => m.HerramientasPage),
+        canActivate: [authGuard],
+      },
+
+      // Préstamos: conectan usuarios y herramientas.
+      {
+        path: 'prestamos',
+        loadComponent: () => import('./app/pages/prestamos/prestamos').then((m) => m.PrestamosPage),
+        canActivate: [authGuard],
       },
 
       // Rutas demo de Sakai. Puedes conservarlas para clase.

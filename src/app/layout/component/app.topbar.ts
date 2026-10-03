@@ -19,7 +19,7 @@ import { AuthService } from '../../core/services/auth.service';
                 <span class="flex h-9 w-9 items-center justify-center rounded-md bg-primary text-primary-contrast">
                     <i class="pi pi-wrench"></i>
                 </span>
-                <span>WEB II</span>
+                <span>WEB II · Centro de Herramientas</span>
             </a>
         </div>
 

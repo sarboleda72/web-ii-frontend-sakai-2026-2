@@ -218,7 +218,7 @@ import { AuthService } from '../../core/services/auth.service';
         linear-gradient(90deg, rgba(234, 179, 8, 0.08), transparent 32%),
         rgba(2, 6, 23, 0.58);
       color: #f8fafc;
-      border-radius: 0;
+      border-radius: 12px;
       padding: 0 1rem;
       outline: 0;
       font: inherit;
@@ -246,7 +246,7 @@ import { AuthService } from '../../core/services/auth.service';
       min-height: 3.3rem;
       margin-top: 0.65rem;
       border: 1px solid rgba(253, 230, 138, 0.72);
-      border-radius: 0;
+      border-radius: 12px;
       background: transparent;
       color: #fde68a;
       padding: 0 1.25rem;

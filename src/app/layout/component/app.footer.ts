@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
     standalone: true,
     selector: 'app-footer',
     template: `<div class="layout-footer">
-        WEB II · Panel de herramientas
+        WEB II · Centro de Herramientas · Panel operativo
     </div>`
 })
 export class AppFooter {}
